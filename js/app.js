@@ -9,7 +9,7 @@ $(function () {
 			this.render(); //renders the app view
 		},
 		render: function () {
-			this.$el.html("<h1>Stir it up.</h1>");
+			this.$el.html("<h1>Stir it up, " + this.model.attributes.name + ".</h1>");
 			return this; //allows for future chaining
 		}
 	});
@@ -18,7 +18,7 @@ $(function () {
 
 	});
 
-	var myModel = new AppModel({name: 'Bob'});
+	var myModel = new AppModel({name: "Bob"});
 
 	var app = new AppView({model: myModel});
 	window.app = app; //allows access to the app from the console once we run this.
