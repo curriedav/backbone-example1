@@ -13,7 +13,13 @@ $(function () {
 			return this; //allows for future chaining
 		}
 	});
+	
+	var AppModel = Backbone.Model.extend({ //constructor fuction
 
-	var app = new AppView();
+	});
+
+	var myModel = new AppModel({name: 'Bob'});
+
+	var app = new AppView({model: myModel});
 	window.app = app; //allows access to the app from the console once we run this.
 });
