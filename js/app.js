@@ -22,4 +22,6 @@ $(function () {
 
 	var app = new AppView({model: myModel});
 	window.app = app; //allows access to the app from the console once we run this.
+
+	app.listenTo(myModel, 'change', app.render);
 });
